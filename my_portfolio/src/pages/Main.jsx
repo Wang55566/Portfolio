@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import MainPageContent from "../components/MainPageContent";
 import LivingRoom from "../models/LivingRoom";
 import Mac from "../models/Mac";
+import ContactInfo from "../components/ContactInfo";
 
 const Main = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
@@ -69,6 +70,7 @@ const Main = () => {
             isRotating={isRotating}
           />
           <MainPageContent position={[-7.1, 3.7, 0]} />
+          <ContactInfo position={[5, 0.2, 0]}/>
         </Suspense>
       </Canvas>
     </Box>
