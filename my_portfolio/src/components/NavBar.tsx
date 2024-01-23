@@ -1,4 +1,4 @@
-import { Flex, IconButton, Text } from "@chakra-ui/react";
+import { Flex, IconButton, Text, HStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +31,9 @@ const NavBar = () => {
       >
         {title}
       </Text>
-      <Dropdown setTitle={setTitle} />
+      <HStack>
+        <Dropdown setTitle={setTitle} />
+      </HStack>
     </Flex>
   );
 };

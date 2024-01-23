@@ -15,7 +15,7 @@ const HomePage = () => {
         <GridItem area={"main"}>
           <Main />
         </GridItem>
-        <GridItem area={"footer"}>
+        <GridItem  area={"footer"}>
           <Footer />
         </GridItem>
       </Grid>

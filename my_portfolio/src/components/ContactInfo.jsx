@@ -1,4 +1,5 @@
 import { Html } from "@react-three/drei";
+import music from "../assets/music/background_music.mp3";
 
 const ContactInfo = (props) => {
   return (
@@ -28,17 +29,27 @@ const ContactInfo = (props) => {
               wang6@hawaii.edu
             </a>
           </div>
-          <a
-            href="https://drive.google.com/file/d/1PDS5bv6GUGOjvg_udVAlBV0Pnr2HqiKT/view?usp=sharing"
-            style={{
-              color: "#007bff",
-              fontWeight: "bold",
-            }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            My Resume (PDF)
-          </a>
+          <div>
+            <a
+              href="https://drive.google.com/file/d/1PDS5bv6GUGOjvg_udVAlBV0Pnr2HqiKT/view?usp=sharing"
+              style={{
+                color: "#007bff",
+                fontWeight: "bold",
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              My Resume (PDF)
+            </a>
+          </div>
+          <div style={{ marginTop: "50px" }}>
+            <audio
+              controls
+              src={music}
+              style={{ width: "100%", maxWidth: "300px" }}
+              title="Play background music"
+            ></audio>
+          </div>
         </div>
       </Html>
     </>

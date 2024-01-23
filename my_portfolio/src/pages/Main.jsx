@@ -39,7 +39,7 @@ const Main = () => {
   return (
     <Box
       w="100vw"
-      h="100%"
+      h="100vh"
       position="relative"
       style={{
         opacity: isVisible ? 1 : 0,
