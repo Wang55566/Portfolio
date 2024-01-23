@@ -9,7 +9,7 @@ const HomePage = () => {
         templateAreas={`
                   "main"
                   "footer"`}
-        gridTemplateRows={"100% 100px"}
+        gridTemplateRows={"100% 100%"}
         height='100vh'
       >
         <GridItem bg="gray.300" area={"main"}>

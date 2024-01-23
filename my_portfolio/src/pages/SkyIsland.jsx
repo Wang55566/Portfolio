@@ -28,8 +28,8 @@ const SkyIsland = () => {
 
   const canvasStyle = {
     backgroundColor: "transparent",
-    width: "100%",
-    height: "100%",
+    width: "100vw",
+    height: "100vh",
     cursor: isGrabbing ? "grabbing" : "grab",
   };
 
@@ -42,7 +42,7 @@ const SkyIsland = () => {
         onMouseUp={() => setIsGrabbing(!isGrabbing)}
       >
         <Suspense>
-          <directionalLight postion={[1, 3, 1]} intensity={4} />
+          <directionalLight position={[1, 3, 1]} intensity={4} />
           <ambientLight intersity={1} />
           <pointLight />
           <spotLight />
