@@ -8,8 +8,8 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-const Dropdown = () => {
-  const dropDownList: string[] = ["Projects", "Life", "About Me"];
+const Dropdown = ({ setTitle }) => {
+  const dropDownList: string[] = ["Projects", "Life", "Contact"];
   const navigate = useNavigate();
 
   return (
@@ -22,7 +22,13 @@ const Dropdown = () => {
         />
         <MenuList>
           {dropDownList.map((list) => (
-            <MenuItem onClick={() => navigate("project")} key={list}>
+            <MenuItem
+              onClick={() => {
+                navigate(`${list}`);
+                setTitle(`My ${list}`);
+              }}
+              key={list}
+            >
               {list}
             </MenuItem>
           ))}

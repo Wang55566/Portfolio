@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
+import MainPageContent from "../components/MainPageContent";
 import LivingRoom from "../models/LivingRoom";
 import Mac from "../models/Mac";
-import MainPageContent from "../components/MainPageContent";
 
 const Main = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
@@ -37,7 +37,7 @@ const Main = () => {
 
   return (
     <Box
-      w="100%"
+      w="100vw"
       h="100%"
       position="relative"
       style={{
@@ -68,7 +68,7 @@ const Main = () => {
             onMouseUp={handleOnMouseUp}
             isRotating={isRotating}
           />
-          <MainPageContent position={[6, 0, 0]} />
+          <MainPageContent position={[-7.1, 3.7, 0]} />
         </Suspense>
       </Canvas>
     </Box>

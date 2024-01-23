@@ -1,14 +1,16 @@
 import { Flex, IconButton, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
 const NavBar = () => {
+  const [title, setTitle] = useState("My Living Room");
   const navigate = useNavigate();
 
   return (
     <Flex
-      h="80px"
+      h="85px"
       justifyContent="space-between"
       alignItems="center"
       marginX={10}
@@ -16,7 +18,10 @@ const NavBar = () => {
       <IconButton
         icon={<FaHome />}
         aria-label="Home"
-        onClick={() => navigate("/")}
+        onClick={() => {
+          navigate("/");
+          setTitle("My Living Room");
+        }}
       />
       <Text
         fontSize={40}
@@ -24,9 +29,9 @@ const NavBar = () => {
         fontFamily="Lobster"
         whiteSpace="nowrap"
       >
-        My Living Room
+        {title}
       </Text>
-      <Dropdown />
+      <Dropdown setTitle={setTitle} />
     </Flex>
   );
 };

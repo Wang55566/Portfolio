@@ -8,6 +8,7 @@ const HtmlProjectCard = ({ image_src, description, link_url, position }) => {
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
     width: "30vw",
     backgroundColor: "#000000",
+    margin:'15px'
   };
 
   const imageStyle = {
