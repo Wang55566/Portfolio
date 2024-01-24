@@ -19,6 +19,8 @@ const Dropdown = ({ setTitle }) => {
           as={IconButton}
           aria-label="Options"
           icon={<HamburgerIcon />}
+          style={{ fontSize: '22px' }}
+
         />
         <MenuList>
           {dropDownList.map((list) => (

@@ -7,7 +7,7 @@ const ContactInfo = (props) => {
       <Html
         {...props}
         style={{
-          fontSize: "26px",
+          fontSize: "1.5vw",
           color: "black",
           fontFamily: "Kalam",
           whiteSpace: "nowrap",

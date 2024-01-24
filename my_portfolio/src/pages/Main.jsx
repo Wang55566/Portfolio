@@ -69,7 +69,7 @@ const Main = () => {
             onMouseUp={handleOnMouseUp}
             isRotating={isRotating}
           />
-          <MainPageContent position={[-7.1, 3.7, 0]} />
+          <MainPageContent position={window.innerWidth < 768 ? [-0.5,3.2,0] : [-7.1, 3.7, 0]} />
           <ContactInfo position={[5, 0.2, 0]}/>
         </Suspense>
       </Canvas>
