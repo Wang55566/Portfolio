@@ -1,24 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import ProjectWithBackGround from "./components/ProjectWithBackGround";
+import Contact from "./pages/ContactPage";
 import Layout from "./pages/Layout";
 import LifePage from "./pages/LifePage";
-import Contact from "./pages/ContactPage";
+import Main from "./pages/Main";
 import SkyIsland from "./pages/SkyIsland";
-import ProjectWithBackGround from './components/ProjectWithBackGround';
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path: "/",
     element: <Layout />,
     // errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage /> },
-      { path: 'projects', element: <ProjectWithBackGround />},
-      { path: 'life', element: <LifePage />},
-      { path: 'skyisland', element: <SkyIsland />},
-      { path: 'contact', element: <Contact />},
-    ]
-  }
+      { index: true, element: <Main /> },
+      { path: "projects", element: <ProjectWithBackGround /> },
+      { path: "life", element: <LifePage /> },
+      { path: "skyisland", element: <SkyIsland /> },
+      { path: "contact", element: <Contact /> },
+    ],
+  },
 ]);
 
 export default router;
