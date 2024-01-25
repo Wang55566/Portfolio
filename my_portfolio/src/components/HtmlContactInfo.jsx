@@ -1,16 +1,16 @@
 import { Html } from "@react-three/drei";
-import { useState } from "react";
+import useStore from "../store";
 
 const ContactInfo = (props) => {
-  const [hoverMessage, setHoverMessage] = useState("");
+  const { setMessage } = useStore();
 
   const handleMouseOver = (message, e) => {
-    setHoverMessage(message);
+    setMessage(message);
     e.currentTarget.style.transform = "scale(1.2)";
   };
 
   const handleMouseOut = (e) => {
-    setHoverMessage("");
+    setMessage("Welcome to My Portfolio!");
     e.currentTarget.style.transform = "scale(1)";
   };
 
@@ -26,9 +26,44 @@ const ContactInfo = (props) => {
         }}
       >
         <div>
-          <p>15536 Faith St.</p>
-          <p>Fontana, CA 92336</p>
-          <p>(808)8259967</p>
+          <div
+            onMouseOver={() => {
+              handleMouseOver("Where to find me.");
+            }}
+            onMouseOut={(e) => {
+              handleMouseOut(e);
+            }}
+          >
+            <div
+              style={{
+                color: "#007bff",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              <p>15536 Faith St.</p>
+              <p>Fontana, CA 92336</p>
+            </div>
+          </div>
+          <div
+            onMouseOver={(e) => {
+              handleMouseOver("Call my number!", e);
+            }}
+            onMouseOut={(e) => {
+              handleMouseOut(e);
+            }}
+          >
+            <a
+              href="tel:+18008259967"
+              style={{
+                color: "#007bff",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              (808) 825-9967
+            </a>
+          </div>
           <div
             onMouseOver={(e) => {
               handleMouseOver("Send me an email!", e);
@@ -59,7 +94,7 @@ const ContactInfo = (props) => {
             <a
               href="https://drive.google.com/file/d/1PDS5bv6GUGOjvg_udVAlBV0Pnr2HqiKT/view?usp=sharing"
               style={{
-                color: "#007bff",
+                color: "#F08500",
                 fontWeight: "bold",
               }}
               target="_blank"
@@ -112,22 +147,6 @@ const ContactInfo = (props) => {
                 }}
               ></i>
             </a>
-          </div>
-          <div>
-            <span
-              style={{
-                display: "block",
-                marginTop: "10px",
-                transition: "opacity 0.3s ease",
-                opacity: hoverMessage ? 0.8 : 0,
-                color: "#001C42",
-                fontSize: "23px",
-                borderRadius: 8,
-                fontFamily: "Titillium Web",
-              }}
-            >
-              {hoverMessage}
-            </span>
           </div>
         </div>
       </Html>

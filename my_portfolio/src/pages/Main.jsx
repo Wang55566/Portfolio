@@ -70,11 +70,11 @@ const Main = () => {
             position={[0, -0.2, 0]}
             rotation={[1.0, 1.0, -0.5]}
           />
-          <Whiteboard scale={[0.01, 0.01, 0.001]} position={[5.7, 1.5, 0]} />
+          <Whiteboard scale={[0.013, 0.013, 0.001]} position={[5.2, 1.7, 0]} />
           <MainPageContent
             position={window.innerWidth < 768 ? [-0.5, 3.2, 0] : [-7.1, 3.7, 0]}
           />
-          <ContactInfo position={[5, 0.2, 0]} />
+          <ContactInfo position={[4.6, 0.2, 0]} />
           <HtmlAudio
             position={audioPosition}
             setAudioPosition={setAudioPosition}
