@@ -1,35 +1,80 @@
+import { useState } from "react";
 import { Html } from "@react-three/drei";
+import profile_image from "../assets/profile/profile_picture.png";
+import useStore from "../store";
 
 const MainPageContent = (props) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const { setMessage } = useStore();
+
+  const containerStyle = {
+    whiteSpace: "nowrap",
+    color: "black",
+    fontWeight: "bold",
+    fontFamily: "Bree Serif",
+    background: "transparent",
+    padding: "15px",
+    borderRadius: "8px",
+    border: "0.5px solid grey",
+    boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
+    cursor: isHovered ? "pointer" : "auto",
+  };
+
+  const handleOnMouseOver = () => {
+    setIsHovered(true);
+    setMessage("Discover Me More!");
+  };
+
+  const handleOnMouseDown = () => {
+    setIsHovered(false);
+    setMessage("Welcome to My Portfolio!");
+  };
+
   return (
     <Html {...props}>
       <div
-        style={{
-          whiteSpace: "nowrap",
-          color: "black",
-          fontWeight: "bold",
-          fontFamily: "Bree Serif",
-          background: "transparent",
-          padding: "6px",
-          borderRadius: 8,
-          border: "0.5px solid grey",
-          boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
-        }}
+        style={containerStyle}
+        onMouseOver={handleOnMouseOver}
+        onMouseOut={handleOnMouseDown}
       >
         <h1 style={{ margin: 0, fontSize: "1.8vw" }}>
           Hi, this is Seng' house.
         </h1>
-        <h2
-          style={{ margin: "10px 0", fontSize: "1.3vw", fontWeight: "normal" }}
-        >
-          A SOFTWARE ENGINEER and DESIGNER from Taiwan.
-        </h2>
-        <h3
-          style={{ margin: "10px 0", fontSize: "1.3vw", fontWeight: "normal" }}
-        >
-          I currently live in California.
-        </h3>
       </div>
+      {isHovered && (
+        <div
+          style={{
+            background: "transparent",
+            padding: "20px",
+            borderRadius: "10px",
+            maxWidth: "400px",
+            textAlign: "center",
+            boxShadow: "0 0 10px rgba(255, 255, 255, 0.2)",
+            marginTop: "25px",
+            boxShadow:
+              "0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img src={profile_image} alt="profile" />
+          </div>
+          <div
+            style={{
+              fontFamily: "Kanit",
+              fontSize: "2vh",
+              color: "green",
+              marginTop: "10px",
+            }}
+          >
+            <p>Hey there!</p>
+            <p>I'm a SOFTWARE DEVELOPER</p>
+            <p>& an enthusiastic amateur designer</p>
+            <p>from Taiwan.</p>
+            <p>I currently live in California.</p>
+            <p>Welcome to my digital playground!</p>
+          </div>
+        </div>
+      )}
     </Html>
   );
 };

@@ -6,12 +6,12 @@ const ContactInfo = (props) => {
 
   const handleMouseOver = (message, e) => {
     setMessage(message);
-    e.currentTarget.style.transform = "scale(1.2)";
+    if (e) e.currentTarget.style.transform = "scale(1.2)";
   };
 
   const handleMouseOut = (e) => {
     setMessage("Welcome to My Portfolio!");
-    e.currentTarget.style.transform = "scale(1)";
+    if (e) e.currentTarget.style.transform = "scale(1)";
   };
 
   return (

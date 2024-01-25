@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
-import gameScreenShot from "../assets/project_pics/game_center.jpeg";
-import toDoScreenShot from "../assets/project_pics/remember_that_flask.jpeg";
-import tradeScreenShot from "../assets/project_pics/smartTrade.png";
+import gameScreenShot from "../assets/projects/game_center.jpeg";
+import toDoScreenShot from "../assets/projects/remember_that_flask.jpeg";
+import tradeScreenShot from "../assets/projects/smartTrade.png";
 import LivingRoom from "../models/LivingRoom";
 import HtmlProjectCard from "./HtmlProjectCard";
 
@@ -45,8 +45,8 @@ const ProjectWithBackGround = () => {
   return (
     <>
       <Box
-        w='100%'
-        h='100%'
+        w="100%"
+        h="100%"
         style={{
           opacity: isVisible ? 1 : 0,
           transition: "opacity 3s ease-in-out",

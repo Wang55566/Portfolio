@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
-import HtmlAudio from "../components/HtmlAudio";
 import ContactInfo from "../components/HtmlContactInfo";
 import MainPageContent from "../components/HtmlMainContent";
 import LivingRoom from "../models/LivingRoom";
@@ -11,8 +10,6 @@ import Whiteboard from "../models/Whiteboard";
 const Main = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
-  const [audioPosition, setAudioPosition] = useState([5, -2.7, 0]);
 
   const boxStyle = {
     opacity: isVisible ? 1 : 0,
@@ -75,10 +72,6 @@ const Main = () => {
             position={window.innerWidth < 768 ? [-0.5, 3.2, 0] : [-7.1, 3.7, 0]}
           />
           <ContactInfo position={[4.6, 0.2, 0]} />
-          <HtmlAudio
-            position={audioPosition}
-            setAudioPosition={setAudioPosition}
-          />
         </Suspense>
       </Canvas>
     </Box>
