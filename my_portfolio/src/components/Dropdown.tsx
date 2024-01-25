@@ -33,7 +33,7 @@ const Dropdown = ({ setTitle }) => {
                 setTitle(`My ${list}`);
               }}
               key={list}
-              fontFamily='Oswald'
+              fontFamily="Oswald"
               fontSize={19}
             >
               {list}

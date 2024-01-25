@@ -21,12 +21,12 @@ const Main = () => {
   };
 
   const handleOnMouseUp = () => {
-    setIsGrabbing((prevState) => !prevState);
+    setIsGrabbing((prev) => !prev);
     setIsRotating(true);
   };
 
   const handleOnMouseDown = () => {
-    setIsGrabbing((prevState) => !prevState);
+    setIsGrabbing((prev) => !prev);
     setIsRotating(false);
   };
 
@@ -42,7 +42,6 @@ const Main = () => {
     <Box
       w="100vw"
       h="100vh"
-      position="relative"
       style={{
         opacity: isVisible ? 1 : 0,
         transition: "opacity 3s ease-in-out",

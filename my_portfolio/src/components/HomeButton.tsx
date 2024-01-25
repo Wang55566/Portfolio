@@ -11,7 +11,7 @@ const HomeButton = ({ setTitle }: Props) => {
 
   return (
     <>
-      <Tooltip label="Go back to Homepage">
+      <Tooltip label="Home">
         <IconButton
           icon={<FaHome />}
           aria-label="Home"

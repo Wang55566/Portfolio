@@ -7,7 +7,7 @@ import MacScene from "../assets/3d/macbook_pro_2021.glb";
 const Mac = (props) => {
   const { nodes, materials } = useGLTF(MacScene);
   const MacGroup = useRef();
-  const { isRotating, onMouseDown, onMouseUp} = props
+  const { isRotating, onMouseDown, onMouseUp } = props;
 
   useFrame((state, delta) => {
     if (isRotating) MacGroup.current.rotation.y += 0.4 * delta;

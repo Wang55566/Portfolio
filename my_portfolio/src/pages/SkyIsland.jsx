@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
 import Island from "../models/Island";
 import Sky from "../models/Sky";
-import Mac from "../models/Mac";
 
 
 const SkyIsland = () => {
@@ -59,7 +58,6 @@ const SkyIsland = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
           />
-          <Mac />
         </Suspense>
       </Canvas>
     </Box>

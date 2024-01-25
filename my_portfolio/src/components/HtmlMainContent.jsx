@@ -16,7 +16,9 @@ const MainPageContent = (props) => {
           boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
         }}
       >
-        <h1 style={{ margin: 0, fontSize: "1.8vw"}}>Hi, this is Seng' house.</h1>
+        <h1 style={{ margin: 0, fontSize: "1.8vw" }}>
+          Hi, this is Seng' house.
+        </h1>
         <h2
           style={{ margin: "10px 0", fontSize: "1.3vw", fontWeight: "normal" }}
         >
