@@ -9,12 +9,9 @@ const Mac = (props) => {
   const MacGroup = useRef();
   const [isRotating, setIsRotating] = useState(true);
 
-  const handleOnMouseDown = () => {
+  const handleOnClick = () => {
     setIsRotating((prev) => !prev);
-  };
-
-  const handleOnMouseUp = () => {
-    setIsRotating((prev) => !prev);
+    console.log('clicked')
   };
 
   useFrame((state, delta) => {
@@ -25,8 +22,7 @@ const Mac = (props) => {
     <a.group
       ref={MacGroup}
       {...props}
-      onPointerDown={handleOnMouseDown}
-      onPointerUp={handleOnMouseUp}
+      onClick={handleOnClick}
     >
       <group position={[0.121, 0.007, 0]}>
         <mesh
