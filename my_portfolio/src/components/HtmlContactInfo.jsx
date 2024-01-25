@@ -90,7 +90,7 @@ const ContactInfo = (props) => {
             </a>
             <a href="https://github.com/Wang55566" target="_blank">
               <i
-                class="fab fa-github"
+                className="fab fa-github"
                 style={{ color: "#333" }}
                 onMouseOver={(e) => {
                   handleMouseOver("Discover my GitHub!", e);
@@ -102,7 +102,7 @@ const ContactInfo = (props) => {
             </a>
             <a href="https://www.instagram.com/sengkhooi" target="_blank">
               <i
-                class="fab fa-instagram"
+                className="fab fa-instagram"
                 style={{ color: "#E4405F" }}
                 onMouseOver={(e) => {
                   handleMouseOver("Explore my Instagram!", e);

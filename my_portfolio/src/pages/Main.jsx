@@ -10,24 +10,28 @@ import Whiteboard from "../models/Whiteboard";
 
 const Main = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
-  const [isRotating, setIsRotating] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+
+  const [audioPosition, setAudioPosition] = useState([5, -2.7, 0]);
+
+  const boxStyle = {
+    opacity: isVisible ? 1 : 0,
+    transition: "opacity 3s ease-in-out",
+    cursor: isGrabbing ? "grabbing" : "grab",
+  };
 
   const canvasStyle = {
     backgroundColor: "transparent",
     width: "100%",
     height: "100%",
-    cursor: isGrabbing ? "grabbing" : "grab",
   };
 
   const handleOnMouseUp = () => {
     setIsGrabbing((prev) => !prev);
-    setIsRotating(true);
   };
 
   const handleOnMouseDown = () => {
     setIsGrabbing((prev) => !prev);
-    setIsRotating(false);
   };
 
   useEffect(() => {
@@ -42,10 +46,9 @@ const Main = () => {
     <Box
       w="100vw"
       h="100vh"
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transition: "opacity 3s ease-in-out",
-      }}
+      style={boxStyle}
+      onMouseUp={handleOnMouseUp}
+      onMouseDown={handleOnMouseDown}
     >
       <Canvas camera={{ near: 0.01, far: 1000 }} style={canvasStyle}>
         <Suspense>
@@ -66,16 +69,16 @@ const Main = () => {
             scale={window.innerWidth < 768 ? [5, 5, 5] : [8, 8, 8]}
             position={[0, -0.2, 0]}
             rotation={[1.0, 1.0, -0.5]}
-            onMouseDown={handleOnMouseDown}
-            onMouseUp={handleOnMouseUp}
-            isRotating={isRotating}
           />
           <Whiteboard scale={[0.01, 0.01, 0.001]} position={[5.7, 1.5, 0]} />
           <MainPageContent
             position={window.innerWidth < 768 ? [-0.5, 3.2, 0] : [-7.1, 3.7, 0]}
           />
           <ContactInfo position={[5, 0.2, 0]} />
-          <HtmlAudio position={[5, -2.7, 0]} />
+          <HtmlAudio
+            position={audioPosition}
+            setAudioPosition={setAudioPosition}
+          />
         </Suspense>
       </Canvas>
     </Box>
