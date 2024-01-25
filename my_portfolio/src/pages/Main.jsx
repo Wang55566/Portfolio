@@ -1,11 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
+import HtmlAudio from "../components/HtmlAudio";
+import ContactInfo from "../components/HtmlContactInfo";
 import MainPageContent from "../components/HtmlMainContent";
 import LivingRoom from "../models/LivingRoom";
 import Mac from "../models/Mac";
-import ContactInfo from "../components/HtmlContactInfo";
-import HtmlAudio from "../components/HtmlAudio";
+import Whiteboard from "../models/Whiteboard";
 
 const Main = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
@@ -70,9 +71,12 @@ const Main = () => {
             onMouseUp={handleOnMouseUp}
             isRotating={isRotating}
           />
-          <MainPageContent position={window.innerWidth < 768 ? [-0.5,3.2,0] : [-7.1, 3.7, 0]} />
-          <ContactInfo position={[5, 0.2, 0]}/>
-          <HtmlAudio position={[5, -2.7, 0]}/>
+          <Whiteboard scale={[0.01, 0.01, 0.001]} position={[5.7, 1.5, 0]} />
+          <MainPageContent
+            position={window.innerWidth < 768 ? [-0.5, 3.2, 0] : [-7.1, 3.7, 0]}
+          />
+          <ContactInfo position={[5, 0.2, 0]} />
+          <HtmlAudio position={[5, -2.7, 0]} />
         </Suspense>
       </Canvas>
     </Box>

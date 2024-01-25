@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Html } from "@react-three/drei";
+import { useState } from "react";
 
 const ContactInfo = (props) => {
   const [hoverMessage, setHoverMessage] = useState("");
@@ -119,11 +119,11 @@ const ContactInfo = (props) => {
                 display: "block",
                 marginTop: "10px",
                 transition: "opacity 0.3s ease",
-                opacity: hoverMessage ? 0.9 : 0,
-                color: '#001C42',
-                fontSize:'23px',
+                opacity: hoverMessage ? 0.8 : 0,
+                color: "#001C42",
+                fontSize: "23px",
                 borderRadius: 8,
-                fontFamily: 'Titillium Web'
+                fontFamily: "Titillium Web",
               }}
             >
               {hoverMessage}
