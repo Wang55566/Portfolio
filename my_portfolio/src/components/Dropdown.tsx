@@ -5,6 +5,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Tooltip,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -15,13 +16,15 @@ const Dropdown = ({ setTitle }) => {
   return (
     <>
       <Menu>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<HamburgerIcon />}
-          style={{ fontSize: '22px' }}
-
-        />
+        <Tooltip label="Menu">
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={<HamburgerIcon />}
+            fontSize={{ base: "18px", md: "22px" }}
+            padding={2}
+          />
+        </Tooltip>
         <MenuList>
           {dropDownList.map((list) => (
             <MenuItem
@@ -30,6 +33,8 @@ const Dropdown = ({ setTitle }) => {
                 setTitle(`My ${list}`);
               }}
               key={list}
+              fontFamily='Oswald'
+              fontSize={19}
             >
               {list}
             </MenuItem>

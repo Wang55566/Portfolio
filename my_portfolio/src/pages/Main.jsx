@@ -1,10 +1,11 @@
 import { Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
-import MainPageContent from "../components/MainPageContent";
+import MainPageContent from "../components/HtmlMainContent";
 import LivingRoom from "../models/LivingRoom";
 import Mac from "../models/Mac";
-import ContactInfo from "../components/ContactInfo";
+import ContactInfo from "../components/HtmlContactInfo";
+import HtmlAudio from "../components/HtmlAudio";
 
 const Main = () => {
   const [isGrabbing, setIsGrabbing] = useState(false);
@@ -71,6 +72,7 @@ const Main = () => {
           />
           <MainPageContent position={window.innerWidth < 768 ? [-0.5,3.2,0] : [-7.1, 3.7, 0]} />
           <ContactInfo position={[5, 0.2, 0]}/>
+          <HtmlAudio position={[5, -2.7, 0]}/>
         </Suspense>
       </Canvas>
     </Box>
