@@ -51,14 +51,53 @@ const ContactInfo = (props) => {
               marginTop: "10px",
             }}
           >
-            <a href="https://www.facebook.com/wang6hawaii/" target="_blank" title='Connect with me on Facebook!'>
-              <i className="fab fa-facebook"></i>
+            <a
+              href="https://www.facebook.com/wang6hawaii/"
+              target="_blank"
+              title="Connect with me on Facebook!"
+            >
+              <i
+                className="fab fa-facebook"
+                style={{ color: "#4267B2" }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.3)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              ></i>
             </a>
-            <a href="https://github.com/Wang55566" target="_blank" title='Discover my GitHub!'>
-              <i class="fab fa-github"></i>
+            <a
+              href="https://github.com/Wang55566"
+              target="_blank"
+              title="Discover my GitHub!"
+            >
+              <i
+                class="fab fa-github"
+                style={{ color: "#333" }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.3)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              ></i>
             </a>
-            <a href="https://www.instagram.com/sengkhooi" target="_blank" title='Explore my Instagram!'>
-              <i class="fab fa-instagram"></i>
+            <a
+              href="https://www.instagram.com/sengkhooi"
+              target="_blank"
+              title="Explore my Instagram!"
+            >
+              <i
+                class="fab fa-instagram"
+                style={{ color: "#E4405F" }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.3)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              ></i>
             </a>
           </div>
           <div style={{ marginTop: "20px" }}>
