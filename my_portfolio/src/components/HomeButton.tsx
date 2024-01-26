@@ -1,4 +1,4 @@
-import { IconButton, Tooltip } from "@chakra-ui/react";
+import { Box, IconButton, Tooltip } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -11,18 +11,20 @@ const HomeButton = ({ setTitle }: Props) => {
 
   return (
     <>
-      <Tooltip label="Home">
-        <IconButton
-          icon={<FaHome />}
-          aria-label="Home"
-          onClick={() => {
-            navigate("/");
-            setTitle("My Living Room");
-          }}
-          fontSize={{ base: "18px", md: "22px" }}
-          padding={2}
-        />
-      </Tooltip>
+      <Box>
+        <Tooltip label="Home">
+          <IconButton
+            icon={<FaHome />}
+            aria-label="Home"
+            onClick={() => {
+              navigate("/");
+              setTitle("My Living Room");
+            }}
+            fontSize={{ base: "18px", md: "22px" }}
+            padding={2}
+          />
+        </Tooltip>
+      </Box>
     </>
   );
 };

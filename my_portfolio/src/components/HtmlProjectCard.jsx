@@ -6,13 +6,14 @@ const HtmlProjectCard = ({ image_src, description, link_url, position }) => {
     borderRadius: "10px",
     padding: "16px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-    width: "30vw",
+    width: "42vw",
+    height:'60vh',
     backgroundColor: "#000000",
     margin: "15px",
   };
 
   const imageStyle = {
-    width: "30vw",
+    width: "40vw",
     height: "40vh",
     overflow: "hidden",
     objectFit: "cover",

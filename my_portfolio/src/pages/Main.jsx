@@ -13,7 +13,7 @@ const Main = () => {
 
   const boxStyle = {
     opacity: isVisible ? 1 : 0,
-    transition: "opacity 3s ease-in-out",
+    transition: "opacity 3.2s ease-in-out",
     cursor: isGrabbing ? "grabbing" : "grab",
   };
 
