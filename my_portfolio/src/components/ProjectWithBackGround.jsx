@@ -64,7 +64,7 @@ const ProjectWithBackGround = () => {
               setImage={setImage}
               setDescription={setDescription}
               setUrl={setUrl}
-              position={[0, 2, 2]}
+              position={[-5.8, 3, -2]}
             />
             <HtmlProjectButton
               options={{
@@ -76,7 +76,7 @@ const ProjectWithBackGround = () => {
               setImage={setImage}
               setDescription={setDescription}
               setUrl={setUrl}
-              position={[1, 2, 2]}
+              position={[-5.8, 4, -2]}
             />
             <HtmlProjectButton
               options={{
@@ -88,13 +88,13 @@ const ProjectWithBackGround = () => {
               setImage={setImage}
               setDescription={setDescription}
               setUrl={setUrl}
-              position={[2, 2, 2]}
+              position={[-5.8, 2, -2]}
             />
             <HtmlProjectCard
               image_src={image}
               description={description}
               link_url={url}
-              position={[-2.7, 2, 1]}
+              position={[-3.5, 4.2, -2]}
             />
           </Suspense>
         </Canvas>

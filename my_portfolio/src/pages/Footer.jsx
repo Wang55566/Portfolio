@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
           </Box>
         </Tooltip>
-        <Tooltip hasArrow label="Connect with me on Facebook!" bg="grey" fontWeight='bold'>
+        <Tooltip hasArrow label="Find me on Facebook!" bg="grey" fontWeight='bold'>
           <Box marginRight={3} marginTop={2}>
             <a href="https://www.facebook.com/wang6hawaii/" target="_blank">
               <FontAwesomeIcon icon={faSquareFacebook} size="xl" />

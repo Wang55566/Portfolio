@@ -28,7 +28,7 @@ const ContactInfo = (props) => {
         <div>
           <div
             onMouseOver={() => {
-              handleMouseOver("Where to find me.");
+              handleMouseOver("My current location.");
             }}
             onMouseOut={(e) => {
               handleMouseOut(e);
@@ -114,9 +114,9 @@ const ContactInfo = (props) => {
             <a href="https://www.facebook.com/wang6hawaii/" target="_blank">
               <i
                 className="fab fa-facebook"
-                style={{ color: "#4267B2" }}
+                style={{ color: "#4267B2", marginRight: "8px" }}
                 onMouseOver={(e) => {
-                  handleMouseOver("Connect with me on Facebook!", e);
+                  handleMouseOver("Find me on Facebook!", e);
                 }}
                 onMouseOut={(e) => {
                   handleMouseOut(e);
@@ -126,7 +126,7 @@ const ContactInfo = (props) => {
             <a href="https://github.com/Wang55566" target="_blank">
               <i
                 className="fab fa-github"
-                style={{ color: "#333" }}
+                style={{ color: "#333", marginRight: "8px" }}
                 onMouseOver={(e) => {
                   handleMouseOver("Discover my GitHub!", e);
                 }}

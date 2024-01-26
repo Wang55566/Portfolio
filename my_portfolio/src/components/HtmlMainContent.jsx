@@ -12,12 +12,14 @@ const MainPageContent = (props) => {
     color: "black",
     fontWeight: "bold",
     fontFamily: "Bree Serif",
+    fontSize: "1.7vw",
     background: "transparent",
     padding: "15px",
     borderRadius: "8px",
     border: "0.5px solid grey",
     boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
     cursor: isHovered ? "pointer" : "auto",
+    width:'19vw'
   };
 
   const handleOnMouseOver = () => {
@@ -37,33 +39,30 @@ const MainPageContent = (props) => {
         onMouseOver={handleOnMouseOver}
         onMouseOut={handleOnMouseDown}
       >
-        <h1 style={{ margin: 0, fontSize: "1.8vw" }}>
-          Hi, this is Seng' house.
-        </h1>
+        <h1>Hi, this is Seng' house.</h1>
       </div>
       {isHovered && (
         <div
           style={{
-            background: "transparent",
+            background: "rgba(0, 0, 0, 0.15)",
             padding: "20px",
             borderRadius: "10px",
-            maxWidth: "400px",
-            textAlign: "center",
+            textAlign: "start",
             boxShadow: "0 0 10px rgba(255, 255, 255, 0.2)",
             marginTop: "25px",
-            boxShadow:
-              "0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)",
           }}
         >
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img src={profile_image} alt="profile" />
+            <img src={profile_image} alt="profile" width="150vw" />
           </div>
           <div
             style={{
               fontFamily: "Kanit",
-              fontSize: "2vh",
+              fontSize: "1.1vw",
               color: "green",
               marginTop: "10px",
+              whiteSpace: "nowrap",
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
             }}
           >
             <p>Hey there!</p>
