@@ -7,6 +7,7 @@ import tradeScreenShot from "../assets/projects/smartTrade.png";
 import LivingRoom from "../models/LivingRoom";
 import HtmlProjectButton from "./HtmlProjectButton";
 import HtmlProjectCard from "./HtmlProjectCard";
+import { Html } from "@react-three/drei";
 
 const canvasStyle = {
   backgroundColor: "transparent",
@@ -18,7 +19,9 @@ const ProjectWithBackGround = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const [image, setImage] = useState(gameScreenShot);
-  const [description, setDescription] = useState("This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more.");
+  const [description, setDescription] = useState(
+    "This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more."
+  );
   const [url, setUrl] = useState("https://game-center-sepia.vercel.app/");
 
   useEffect(() => {
@@ -93,6 +96,18 @@ const ProjectWithBackGround = () => {
               setUrl={setUrl}
               position={[-5.8, 2, -2]}
             />
+            <Html>
+              <div
+                style={{
+                  position:'absolute',
+                  whiteSpace: "nowrap",
+                  fontFamily: "Kanit",
+                  top: "1vh",
+                }}
+              >
+                <h1>Select a project.</h1>
+              </div>
+            </Html>
             <HtmlProjectCard
               image_src={image}
               description={description}
