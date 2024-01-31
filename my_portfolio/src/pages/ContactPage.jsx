@@ -1,5 +1,6 @@
 import { Button, FormLabel, Input, Textarea } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import backgroundImage from "../assets/background/mountain.png";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -31,39 +32,50 @@ const Contact = () => {
 
   return (
     <>
-      <form
-        onSubmit={onSubmit}
+      <div
         style={{
-          maxWidth: "500px",
-          margin: "50px auto",
-          padding: "35px",
-          backgroundColor: "#2d2d2d",
-          color: "#fff",
-          borderRadius: "8px",
-          boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-          fontFamily: "Kanit",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          minHeight: "90vh",
         }}
       >
-        <FormLabel>Name</FormLabel>
-        <Input type="text" name="name" placeholder="Chris Anderson" />
-        <FormLabel marginTop={5} width="100%">
-          Email
-        </FormLabel>
-        <Input type="email" name="email" placeholder="example.mymail.com" />
-        <FormLabel marginTop={5} width="100%">
-          Phone Number
-        </FormLabel>
-        <Input type="tel" name="phone" placeholder="800-111-222" />
-        <FormLabel marginTop={5}>Message</FormLabel>
-        <Textarea
-          name="message"
-          placeholder="It is nice meeting you!"
-          height="150px"
-        ></Textarea>
-        <Button type="submit" marginTop={10} marginBottom={2} bg="#1a8cff">
-          Submit Form
-        </Button>
-      </form>
+        <form
+          onSubmit={onSubmit}
+          style={{
+            maxWidth: "500px",
+            height:"fit-content",
+            margin: "50px auto",
+            padding: "35px",
+            backgroundColor: "#2d2d2d",
+            color: "#fff",
+            borderRadius: "8px",
+            boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+            fontFamily: "Kanit",
+          }}
+        >
+          <FormLabel>Name</FormLabel>
+          <Input type="text" name="name" placeholder="Chris Anderson" />
+          <FormLabel marginTop={5} width="100%">
+            Email
+          </FormLabel>
+          <Input type="email" name="email" placeholder="example.mymail.com" />
+          <FormLabel marginTop={5} width="100%">
+            Phone Number
+          </FormLabel>
+          <Input type="tel" name="phone" placeholder="800-111-222" />
+          <FormLabel marginTop={5}>Message</FormLabel>
+          <Textarea
+            name="message"
+            placeholder="It is nice meeting you!"
+            height="150px"
+          ></Textarea>
+          <Button type="submit" marginTop={10} marginBottom={2} bg="#1a8cff">
+            Submit Form
+          </Button>
+        </form>
+      </div>
     </>
   );
 };
