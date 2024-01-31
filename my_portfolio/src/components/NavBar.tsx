@@ -16,7 +16,7 @@ const NavBar = () => {
     >
       <HomeButton setTitle={setTitle} />
       <Title title={title} />
-        <Dropdown setTitle={setTitle} />
+      <Dropdown setTitle={setTitle} />
     </Flex>
   );
 };

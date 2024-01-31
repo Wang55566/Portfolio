@@ -69,7 +69,9 @@ const Main = () => {
           />
           <Whiteboard scale={[0.014, 0.013, 0.001]} position={[5.2, 3.1, -2]} />
           <MainPageContent
-            position={window.innerWidth < 768 ? [-0.5, 3.2, -2] : [-7.1, 4.6, -2]}
+            position={
+              window.innerWidth < 768 ? [-0.5, 3.2, -2] : [-7.1, 4.6, -2]
+            }
           />
           <ContactInfo position={[4.6, 0.2, -2]} />
         </Suspense>

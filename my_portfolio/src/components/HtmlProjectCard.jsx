@@ -7,9 +7,10 @@ const HtmlProjectCard = ({ image_src, description, link_url, position }) => {
     padding: "16px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
     width: "42vw",
-    height:'60vh',
+    height: "60vh",
     backgroundColor: "#000000",
     margin: "15px",
+    overflowY: "auto",
   };
 
   const imageStyle = {
@@ -20,11 +21,25 @@ const HtmlProjectCard = ({ image_src, description, link_url, position }) => {
   };
 
   return (
-    <Html position={position}>
+    <Html position={position} style={{ fontFamily: "Kanit" }}>
       <div style={cardStyle}>
         <img src={image_src} style={imageStyle} />
-        <p>{description}</p>
-        <a href={link_url}>Link</a>
+        <p style={{ marginTop: "40px" }}>{description}</p>
+        <a
+          href={link_url}
+          target="_blank"
+          style={{
+            color: "#007bff",
+            display: "block",
+            marginTop: "5px",
+            fontSize: "23px",
+            fontFamily: "Bree,Serif",
+            fontWeight: "bold",
+          }}
+          title="Click to visit the link"
+        >
+          Link
+        </a>
       </div>
     </Html>
   );

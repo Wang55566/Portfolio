@@ -18,7 +18,7 @@ const ProjectWithBackGround = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const [image, setImage] = useState(gameScreenShot);
-  const [description, setDescription] = useState("Game Center");
+  const [description, setDescription] = useState("This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more.");
   const [url, setUrl] = useState("https://newsmarttrade.onrender.com/");
 
   useEffect(() => {
@@ -58,7 +58,8 @@ const ProjectWithBackGround = () => {
               options={{
                 buttonText: "Game Center",
                 image: gameScreenShot,
-                description: "Explore Games!",
+                description:
+                  "This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more.",
                 url: "https://game-center-sepia.vercel.app/",
               }}
               setImage={setImage}
@@ -70,7 +71,8 @@ const ProjectWithBackGround = () => {
               options={{
                 buttonText: "Remember That Flask",
                 image: toDoScreenShot,
-                description: "Remember That Flask project description.",
+                description:
+                  "Users of Remember That Flask have the flexibility to create multiple task lists. Tasks within these lists can be customized with various details, including the option to edit and add specific fields. It is useful to organized a lot of tasks in daily life.",
                 url: "https://remember-that-flask.onrender.com/",
               }}
               setImage={setImage}
@@ -82,7 +84,8 @@ const ProjectWithBackGround = () => {
               options={{
                 buttonText: "Trade Center",
                 image: tradeScreenShot,
-                description: "Trade Center Description",
+                description:
+                  "This stock trading app empowers investors to explore investable securities like stocks, ETFs, and more directly from their mobile devices. Users can access comprehensive information, including news updates, company histories, and backgrounds, providing a holistic view of potential investment opportunities.",
                 url: "https://newsmarttrade.onrender.com/",
               }}
               setImage={setImage}
