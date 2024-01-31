@@ -19,7 +19,7 @@ const ProjectWithBackGround = () => {
 
   const [image, setImage] = useState(gameScreenShot);
   const [description, setDescription] = useState("This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more.");
-  const [url, setUrl] = useState("https://newsmarttrade.onrender.com/");
+  const [url, setUrl] = useState("https://game-center-sepia.vercel.app/");
 
   useEffect(() => {
     const timer = setTimeout(() => {
