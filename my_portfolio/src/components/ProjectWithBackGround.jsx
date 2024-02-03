@@ -113,15 +113,15 @@ const ProjectWithBackGround = () => {
                   position: "absolute",
                   whiteSpace: "nowrap",
                   bottom: "41vh",
-                  right: "17vw",
+                  right: "15vw",
                   color: "#4169E1",
                   fontSize: "1.5vw",
-                  fontFamily: "Titillium,Web",
+                  fontFamily: "Oswald",
                   fontWeight: "bold",
                   padding: "5px",
                 }}
               >
-                <h1>Select a project</h1>
+                <h1>Please Select a Project</h1>
               </div>
             </Html>
             <HtmlProjectCard

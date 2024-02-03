@@ -72,7 +72,7 @@ const Contact = () => {
             height="150px"
           ></Textarea>
           <Button type="submit" marginTop={10} marginBottom={2} bg="#1a8cff">
-            Submit Form
+            Send Me a Message
           </Button>
         </form>
       </div>

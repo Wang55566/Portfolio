@@ -23,10 +23,10 @@ const HtmlProjectCard = (props) => {
 
   const linkStyle = {
     backgroundColor: "#ffc0cb",
-    color: "#fff",
-    borderRadius: "10px",
-    padding: "10px 15px",
-    boxShadow: "2px 2px 1px #888",
+    color: "#000",
+    borderRadius: "8px",
+    padding: "8px 8px",
+    boxShadow: "1px 1px 1px #888",
     transition: "background-color 0.3s",
     cursor: "pointer",
     marginTop: "5px",
@@ -35,28 +35,43 @@ const HtmlProjectCard = (props) => {
     fontWeight: "bold",
   };
 
+  const handleMouseOver = (e) => {
+    e.target.style.backgroundColor = "#ffb6c1";
+    e.target.style.transform = "scale(1.05)";
+  };
+
+  const handleMouseOut = (e) => {
+    e.target.style.backgroundColor = "#ffc0cb";
+    e.target.style.transform = "scale(1)";
+  };
+
   return (
-    <Html position={position} style={{ fontFamily: "Kanit" }}>
+    <Html position={position}>
       <div style={cardStyle}>
         <p
           style={{
             display: "flex",
             justifyContent: "center",
-            fontSize: "25px",
+            fontFamily: "Kalam",
+            fontSize: "30px",
+            marginBottom: "5px",
+            color: "#ffc0cb",
           }}
         >
           {title}
         </p>
         <img src={image_src} style={imageStyle} />
-        <p style={{ marginTop: "40px" }}>{description}</p>
-        <div style={{ display: "flex", marginTop: "20px" }}>
+        <p style={{ marginTop: "25px", fontSize: "17px", fontFamily: "Kanit" }}>
+          {description}
+        </p>
+        <div style={{ display: "flex", marginTop: "15px" }}>
           <a
             href={link_url}
             target="_blank"
             style={linkStyle}
             title="Click to visit the link"
-            onmouseover="this.style.backgroundColor='#ff8c94'; this.style.transform='scale(1.05)';"
-            onmouseout="this.style.backgroundColor='#ffc0cb'; this.style.transform='scale(1)';"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
           >
             Link
           </a>
@@ -65,6 +80,8 @@ const HtmlProjectCard = (props) => {
             target="_blank"
             style={{ ...linkStyle, marginLeft: "30px" }}
             title="See the repo"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
           >
             Repo
           </a>

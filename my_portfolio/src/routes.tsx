@@ -4,7 +4,6 @@ import Contact from "./pages/ContactPage";
 import Layout from "./pages/Layout";
 import LifePage from "./pages/LifePage";
 import Main from "./pages/Main";
-import SkyIsland from "./pages/SkyIsland";
 import Message from "./pages/ContactMessage";
 
 const router = createBrowserRouter([
@@ -16,9 +15,8 @@ const router = createBrowserRouter([
       { index: true, element: <Main /> },
       { path: "projects", element: <ProjectWithBackGround /> },
       { path: "life", element: <LifePage /> },
-      { path: "skyisland", element: <SkyIsland /> },
       { path: "contact", element: <Contact /> },
-      { path: "message", element: <Message />}
+      { path: "message", element: <Message /> },
     ],
   },
 ]);
