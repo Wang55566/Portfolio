@@ -1,13 +1,16 @@
 import { Html } from "@react-three/drei";
 
 const HtmlProjectButton = (props) => {
-  const { options, setImage, setDescription, setUrl } = props;
+  const { options, setTitle, setImage, setDescription, setUrl, setRepo } =
+    props;
 
   const handleOnClick = (e) => {
     e.stopPropagation();
+    setTitle(options.title);
     setImage(options.image);
     setDescription(options.description);
     setUrl(options.url);
+    setRepo(options.repo);
   };
 
   return (
@@ -32,7 +35,7 @@ const HtmlProjectButton = (props) => {
             e.target.style.backgroundColor = "#3498db";
           }}
         >
-          {options.buttonText}
+          {options.title}
         </button>
       </Html>
     </>

@@ -18,11 +18,13 @@ const canvasStyle = {
 const ProjectWithBackGround = () => {
   const [isVisible, setIsVisible] = useState(false);
 
+  const [title, setTitle] = useState("Game Center");
   const [image, setImage] = useState(gameScreenShot);
   const [description, setDescription] = useState(
     "This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more."
   );
   const [url, setUrl] = useState("https://game-center-sepia.vercel.app/");
+  const [repo, setRepo] = useState("https://github.com/Wang55566/Portfolio");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -59,65 +61,75 @@ const ProjectWithBackGround = () => {
             />
             <HtmlProjectButton
               options={{
-                buttonText: "Game Center",
+                title: "Game Center",
                 image: gameScreenShot,
                 description:
                   "This comprehensive game info website serves as a rich and detailed resource for video game enthusiasts. The platform is dedicated to providing up-to-date information on a wide variety of video games across multiple platforms, including PC, PlayStation, Xbox, Nintendo Switch, mobile devices, and more.",
                 url: "https://game-center-sepia.vercel.app/",
+                repo: "https://github.com/Wang55566/Video-Game-Center/",
               }}
+              setTitle={setTitle}
               setImage={setImage}
               setDescription={setDescription}
               setUrl={setUrl}
+              setRepo={setRepo}
               position={[-5.8, 3, -2]}
             />
             <HtmlProjectButton
               options={{
-                buttonText: "Remember That Flask",
+                title: "Remember That Flask",
                 image: toDoScreenShot,
                 description:
                   "Users of Remember That Flask have the flexibility to create multiple task lists. Tasks within these lists can be customized with various details, including the option to edit and add specific fields. It is useful to organized a lot of tasks in daily life.",
                 url: "https://remember-that-flask.onrender.com/",
+                repo: "https://github.com/sarahmoore19/RememberThatFlask/",
               }}
+              setTitle={setTitle}
               setImage={setImage}
               setDescription={setDescription}
               setUrl={setUrl}
+              setRepo={setRepo}
               position={[-5.8, 4, -2]}
             />
             <HtmlProjectButton
               options={{
-                buttonText: "Trade Center",
+                title: "Trade Center",
                 image: tradeScreenShot,
                 description:
                   "This stock trading app empowers investors to explore investable securities like stocks, ETFs, and more directly from their mobile devices. Users can access comprehensive information, including news updates, company histories, and backgrounds, providing a holistic view of potential investment opportunities.",
                 url: "https://newsmarttrade.onrender.com/",
+                repo: "https://github.com/Wang55566/SmartTrade/",
               }}
+              setTitle={setTitle}
               setImage={setImage}
               setDescription={setDescription}
               setUrl={setUrl}
+              setRepo={setRepo}
               position={[-5.8, 2, -2]}
             />
             <Html>
               <div
                 style={{
-                  position:'absolute',
+                  position: "absolute",
                   whiteSpace: "nowrap",
-                  fontFamily: "Kanit",
                   bottom: "41vh",
                   right: "17vw",
                   color: "#4169E1",
                   fontSize: "1.5vw",
-                  fontFamily:"Titillium,Web",
-                  fontWeight:"bold",
-                  padding:"5px",
+                  fontFamily: "Titillium,Web",
+                  fontWeight: "bold",
+                  padding: "5px",
                 }}
               >
                 <h1>Select a project</h1>
               </div>
             </Html>
             <HtmlProjectCard
+              title={title}
               image_src={image}
               description={description}
               link_url={url}
+              repo={repo}
               position={[-3.5, 4.2, -2]}
             />
           </Suspense>
