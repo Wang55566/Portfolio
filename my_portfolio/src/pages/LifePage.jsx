@@ -55,7 +55,7 @@ const LifePage = () => {
     transition: "opacity 3s ease-in-out",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
-    color: "#000",
+    color: "#fff",
     fontFamily: "Kalam",
     fontSize: "1vw",
   };
@@ -63,7 +63,7 @@ const LifePage = () => {
   const contentStyle = {
     position: "relative",
     padding: "20px",
-    backgroundColor: "#f1f1f1",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     borderRadius: "5px",
     marginBottom: "20px",
     width: "calc(28vw - 40px)",
