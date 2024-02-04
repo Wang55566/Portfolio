@@ -5,8 +5,8 @@ import gameScreenShot from "../assets/projects/game_center.jpeg";
 import toDoScreenShot from "../assets/projects/remember_that_flask.jpeg";
 import tradeScreenShot from "../assets/projects/smartTrade.png";
 import LivingRoom from "../models/LivingRoom";
-import HtmlProjectButton from "./HtmlProjectButton";
-import HtmlProjectCard from "./HtmlProjectCard";
+import HtmlProjectButton from "../components/HtmlProjectButton";
+import HtmlProjectCard from "../components/HtmlProjectCard";
 import { Html } from "@react-three/drei";
 
 const canvasStyle = {

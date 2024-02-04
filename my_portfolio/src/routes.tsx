@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import ProjectWithBackGround from "./components/ProjectWithBackGround";
+import ProjectWithBackGround from "./pages/ProjectWithBackGround";
 import Contact from "./pages/ContactPage";
 import Layout from "./pages/Layout";
 import LifePage from "./pages/LifePage";

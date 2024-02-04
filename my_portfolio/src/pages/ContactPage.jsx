@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react';
 import { Button, FormLabel, Input, Textarea } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/background/mountain.png";
 
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const onSubmit = async (e) => {
     //   e.preventDefault();
@@ -39,6 +49,8 @@ const Contact = () => {
           backgroundPosition: "center",
           display: "flex",
           minHeight: "90vh",
+          opacity: isVisible ? 1 : 0,
+          transition: "opacity 3s ease-in-out",
         }}
       >
         <form
@@ -71,7 +83,7 @@ const Contact = () => {
             placeholder="It is nice meeting you!"
             height="150px"
           ></Textarea>
-          <Button type="submit" marginTop={10} marginBottom={2} bg="#1a8cff">
+          <Button type="submit" marginTop={10} marginBottom={2} bg="#1a8cff" _hover={{ bg: "#4da6ff" }} style={{fontFamily:"Kalam"}}>
             Send Me a Message
           </Button>
         </form>

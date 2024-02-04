@@ -69,7 +69,7 @@ const HtmlProjectCard = (props) => {
             href={link_url}
             target="_blank"
             style={linkStyle}
-            title="Click to visit the link"
+            title="Visit the Site"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
