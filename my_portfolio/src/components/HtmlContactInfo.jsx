@@ -92,7 +92,7 @@ const ContactInfo = (props) => {
             }}
           >
             <a
-              href="https://drive.google.com/file/d/1PDS5bv6GUGOjvg_udVAlBV0Pnr2HqiKT/view?usp=sharing"
+              href="https://drive.google.com/file/d/19RH6M0YQ4Q6gnRCjvRTznZg_KA7nljtn/view?usp=sharing"
               style={{
                 color: "#F08500",
                 fontWeight: "bold",
