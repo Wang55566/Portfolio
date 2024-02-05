@@ -14,7 +14,7 @@ const ContactMessage = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       navigate("/");
-    }, 3500);
+    }, 2500);
 
     return () => clearTimeout(timeout);
   }, [navigate]);
