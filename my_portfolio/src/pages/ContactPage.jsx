@@ -3,7 +3,7 @@ import { Button, FormLabel, Input, Textarea } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/background/mountain.png";
 
-const apiKey = process.env.MESSAGE_API_KEY
+// const apiKey = process.env.MESSAGE_API_KEY
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,27 +18,27 @@ const Contact = () => {
   }, []);
 
   const onSubmit = async (e) => {
-      // e.preventDefault();
-      // const formData = new FormData(e.target);
+      e.preventDefault();
+      const formData = new FormData(e.target);
 
-      // formData.append("access_key", "346fbe24-7718-4a0e-8b95-5617ab897cb2");
+      formData.append("access_key", "346fbe24-7718-4a0e-8b95-5617ab897cb2");
 
-      // const object = Object.fromEntries(formData);
-      // const json = JSON.stringify(object);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-      // const res = await fetch("https://api.web3forms.com/submit", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //     Accept: "application/json",
-      //   },
-      //   body: json,
-      // }).then((res) => res.json());
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-      // if (res.success) {
-      //   navigate("/message");
-      //}
-    navigate("/message");
+      if (res.success) {
+        navigate("/message");
+      }
+    // navigate("/message");
   };
 
   return (
