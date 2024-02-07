@@ -3,8 +3,6 @@ import { Button, FormLabel, Input, Textarea } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/background/mountain.png";
 
-// const apiKey = process.env.MESSAGE_API_KEY
-
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
