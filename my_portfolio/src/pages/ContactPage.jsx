@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
 import { Button, FormLabel, Input, Textarea } from "@chakra-ui/react";
+import { useForm } from "@formspree/react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/background/mountain.png";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
+  const [state, handleSubmit] = useForm("xjvnypdb");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,27 +18,11 @@ const Contact = () => {
   }, []);
 
   const onSubmit = async (e) => {
-      // e.preventDefault();
-      // const formData = new FormData(e.target);
-
-      // formData.append("access_key", "346fbe24-7718-4a0e-8b95-5617ab897cb2");
-
-      // const object = Object.fromEntries(formData);
-      // const json = JSON.stringify(object);
-
-      // const res = await fetch("https://api.web3forms.com/submit", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //     Accept: "application/json",
-      //   },
-      //   body: json,
-      // }).then((res) => res.json());
-
-      // if (res.success) {
-      //   navigate("/message");
-      // }
-    navigate("/message");
+    e.preventDefault();
+    await handleSubmit(e);
+    if (state.succeeded) {
+      navigate("/message");
+    }
   };
 
   return (
@@ -56,7 +42,7 @@ const Contact = () => {
           onSubmit={onSubmit}
           style={{
             maxWidth: "500px",
-            height:"fit-content",
+            height: "fit-content",
             margin: "50px auto",
             padding: "35px",
             backgroundColor: "#2d2d2d",
@@ -82,7 +68,14 @@ const Contact = () => {
             placeholder="It is nice meeting you!"
             height="150px"
           ></Textarea>
-          <Button type="submit" marginTop={10} marginBottom={2} bg="#1a8cff" _hover={{ bg: "#4da6ff" }} style={{fontFamily:"Kalam"}}>
+          <Button
+            type="submit"
+            marginTop={10}
+            marginBottom={2}
+            bg="#1a8cff"
+            _hover={{ bg: "#4da6ff" }}
+            style={{ fontFamily: "Kalam" }}
+          >
             Send Me a Message
           </Button>
         </form>
