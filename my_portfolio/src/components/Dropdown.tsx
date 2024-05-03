@@ -1,3 +1,5 @@
+// Dropdown component for the navigation bar
+
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   IconButton,
