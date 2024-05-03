@@ -19,7 +19,7 @@ const MainPageContent = (props) => {
     border: "0.5px solid grey",
     boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
     cursor: isHovered ? "pointer" : "auto",
-    width:'19vw'
+    width: "19vw",
   };
 
   const handleOnMouseOver = () => {

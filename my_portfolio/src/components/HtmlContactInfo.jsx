@@ -6,12 +6,18 @@ const ContactInfo = (props) => {
 
   const handleMouseOver = (message, e) => {
     setMessage(message);
-    if (e) e.currentTarget.style.transform = "scale(1.2)";
+    if (e) {
+      e.currentTarget.style.transform = "scale(1.3)";
+      e.currentTarget.style.transition = "transform 0.5s ease-in";
+    }
   };
 
   const handleMouseOut = (e) => {
     setMessage("Welcome to My Portfolio!");
-    if (e) e.currentTarget.style.transform = "scale(1)";
+    if (e) {
+      e.currentTarget.style.transform = "scale(1)";
+      e.currentTarget.style.transition = "transform 0.5s ease-in";
+    }
   };
 
   return (
@@ -41,8 +47,7 @@ const ContactInfo = (props) => {
                 fontWeight: "bold",
               }}
             >
-              <p>15536 Faith St.</p>
-              <p>Fontana, CA 92336</p>
+              <p>Los Angles, California</p>
             </div>
           </div>
           <div
