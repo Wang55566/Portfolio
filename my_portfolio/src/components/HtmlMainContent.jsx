@@ -35,7 +35,11 @@ const MainPageContent = (props) => {
   return (
     <Html {...props}>
       <div
-        style={containerStyle}
+        style={{
+          ...containerStyle,
+          transition: "all 1.5s",
+
+        }}
         onMouseOver={handleOnMouseOver}
         onMouseOut={handleOnMouseDown}
       >
