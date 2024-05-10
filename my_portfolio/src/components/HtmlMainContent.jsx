@@ -19,7 +19,8 @@ const MainPageContent = (props) => {
     border: "0.5px solid grey",
     boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
     cursor: isHovered ? "pointer" : "auto",
-    width: "19vw",
+    width: "20vw",
+    transition: "all 1.5s",
   };
 
   const handleOnMouseOver = () => {
@@ -35,11 +36,7 @@ const MainPageContent = (props) => {
   return (
     <Html {...props}>
       <div
-        style={{
-          ...containerStyle,
-          transition: "all 1.5s",
-
-        }}
+        style={containerStyle}
         onMouseOver={handleOnMouseOver}
         onMouseOut={handleOnMouseDown}
       >
@@ -66,7 +63,7 @@ const MainPageContent = (props) => {
               color: "green",
               marginTop: "10px",
               whiteSpace: "nowrap",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
             }}
           >
             <p>Hey there!</p>
