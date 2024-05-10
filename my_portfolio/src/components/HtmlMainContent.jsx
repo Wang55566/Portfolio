@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Html } from "@react-three/drei";
-import profile_image from "../assets/profile/profile_picture.png";
+import profile_image from "../assets/profile/profile.jpg";
 import useStore from "../store";
 
 const MainPageContent = (props) => {
@@ -53,7 +53,7 @@ const MainPageContent = (props) => {
           }}
         >
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img src={profile_image} alt="profile" width="150vw" />
+            <img src={profile_image} alt="profile" width="150vw" style={{borderRadius: "10px"}}/>
           </div>
           <div
             style={{
