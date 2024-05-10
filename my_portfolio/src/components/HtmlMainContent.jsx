@@ -6,6 +6,7 @@ import useStore from "../store";
 const MainPageContent = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const { setMessage } = useStore();
+  const { position } = props;
 
   const containerStyle = {
     whiteSpace: "nowrap",
