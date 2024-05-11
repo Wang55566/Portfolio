@@ -12,7 +12,7 @@ const MainPageContent = (props) => {
     fontWeight: "bold",
     fontFamily: "Bree Serif",
     fontSize: "1.7vw",
-    background: "transparent",
+    background: isHovered ? "rgba(0,0,0,0.5)" : "transparent",
     padding: "15px",
     borderRadius: "8px",
     border: "0.5px solid grey",
@@ -23,6 +23,15 @@ const MainPageContent = (props) => {
     color: isHovered ? "#B5C18E" : "black",
     textAlign: "center",
   };
+
+  const picStyle = {
+    background: "rgba(0, 0, 0, 0.5)",
+    padding: "20px",
+    borderRadius: "10px",
+    textAlign: "start",
+    boxShadow: "0 0 10px rgba(255, 255, 255, 0.2)",
+    marginTop: "25px",
+  }
 
   const handleOnMouseOver = () => {
     setIsHovered(true);
@@ -45,14 +54,7 @@ const MainPageContent = (props) => {
       </div>
       {isHovered && (
         <div
-          style={{
-            background: "rgba(0, 0, 0, 0.5)",
-            padding: "20px",
-            borderRadius: "10px",
-            textAlign: "start",
-            boxShadow: "0 0 10px rgba(255, 255, 255, 0.2)",
-            marginTop: "25px",
-          }}
+          style={picStyle}
         >
           <div style={{ display: "flex", justifyContent: "center" }}>
             <img src={profile_image} alt="profile" width="150vw" style={{borderRadius: "10px"}}/>
