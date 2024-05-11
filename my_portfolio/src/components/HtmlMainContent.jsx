@@ -9,7 +9,6 @@ const MainPageContent = (props) => {
 
   const containerStyle = {
     whiteSpace: "nowrap",
-    color: "black",
     fontWeight: "bold",
     fontFamily: "Bree Serif",
     fontSize: "1.7vw",
@@ -20,7 +19,9 @@ const MainPageContent = (props) => {
     boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
     cursor: isHovered ? "pointer" : "auto",
     width: "20vw",
-    transition: "all 1.5s",
+    transition: "all 1s",
+    color: isHovered ? "#B5C18E" : "black",
+    textAlign: "center",
   };
 
   const handleOnMouseOver = () => {
@@ -45,7 +46,7 @@ const MainPageContent = (props) => {
       {isHovered && (
         <div
           style={{
-            background: "rgba(0, 0, 0, 0.15)",
+            background: "rgba(0, 0, 0, 0.5)",
             padding: "20px",
             borderRadius: "10px",
             textAlign: "start",
@@ -60,7 +61,7 @@ const MainPageContent = (props) => {
             style={{
               fontFamily: "Kanit",
               fontSize: "1.1vw",
-              color: "green",
+              color: "#C7B7A3",
               marginTop: "10px",
               whiteSpace: "nowrap",
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
