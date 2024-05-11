@@ -30,7 +30,7 @@ const MainPageContent = (props) => {
     borderRadius: "10px",
     textAlign: "start",
     boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.8)",
-    marginTop: "25px",
+    marginTop: "25px"
   }
 
   const textStyle = {
