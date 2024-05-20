@@ -50,7 +50,7 @@ const Main = () => {
       <Canvas camera={{ near: 0.01, far: 1000 }} style={canvasStyle}>
         <Suspense>
           <directionalLight position={[1, 3, 1]} intensity={4} />
-          <ambientLight intersity={1} />
+          <ambientLight intensity={1} />
           <pointLight />
           <spotLight />
           <hemisphereLight
