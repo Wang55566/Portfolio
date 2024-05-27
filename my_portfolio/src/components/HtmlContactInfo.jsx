@@ -47,7 +47,7 @@ const ContactInfo = (props) => {
                 fontWeight: "bold",
               }}
             >
-              <p>Los Angles, California</p>
+              <p>Los Angeles, California</p>
             </div>
           </div>
           <div
@@ -88,7 +88,7 @@ const ContactInfo = (props) => {
               wang6@hawaii.edu
             </a>
           </div>
-          <div
+          {/* <div
             onMouseOver={(e) => {
               handleMouseOver("View my resume!", e);
             }}
@@ -106,7 +106,7 @@ const ContactInfo = (props) => {
             >
               My Resume (PDF)
             </a>
-          </div>
+          </div> */}
           <div
             style={{
               display: "flex",
