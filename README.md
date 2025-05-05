@@ -7,4 +7,4 @@ Visit the live site: [Portfolio Link](https://portfolio-beta-ruby-46.vercel.app/
 
 ## Contact Me
 - Email: wang6@hawaii.edu
-- Phone Number: 808-825-9967
+- Phone Number: 415-390-7212
